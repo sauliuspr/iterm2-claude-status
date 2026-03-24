@@ -139,6 +139,47 @@ To use:
 2. Copy the configuration to your iTerm2 preferences
 3. Restart iTerm2
 
+## tmux Configuration
+
+### Add to Status Bar
+
+Add the claude status to your tmux status bar by editing `~/.tmux.conf`:
+
+```bash
+# Refresh every 2 seconds (same as script runtime)
+set -g status-interval 2
+
+# Add claude status to the right side of the status bar
+set -g status-right "#[fg=#d4d4d4]#(~/iterm2-claude-status/scripts/claude_status.sh --no-emoji) #[fg=#56b6c2]%H:%M"
+```
+
+### Using the Example Config
+
+The `examples/tmux.conf` provides a complete pre-configured setup:
+
+```bash
+# Copy to your tmux config
+cat examples/tmux.conf >> ~/.tmux.conf
+
+# Or manually source it
+source ~/iterm2-claude-status/examples/tmux.conf
+```
+
+### Tmux Output
+
+In tmux status bar:
+```
+session-name ● 2:editor  🤖 haiku | 📊 29% | 💾 8698k | 🔧 0 tools 14:32
+```
+
+### Disable Emoji for Compatibility
+
+If your tmux colors don't display emoji well:
+
+```bash
+set -g status-right "#(~/iterm2-claude-status/scripts/claude_status.sh --no-emoji) %H:%M"
+```
+
 ## Dependencies
 
 The script uses only standard Unix tools:
