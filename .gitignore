@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+*.jsonl
+
+# Cache
+.cache/
+*.cache
+
+# Temp
+/tmp/
+/temp/

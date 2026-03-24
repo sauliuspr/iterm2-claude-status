@@ -1,0 +1,40 @@
+{
+  "customComponents": [
+    {
+      "knobs": {
+        "base64": false,
+        "command": "/Users/YOUR_USERNAME/iterm2-claude-status/scripts/claude_status.sh",
+        "refresh_interval": 2
+      },
+      "uuid": "claude-status"
+    }
+  ],
+  "profiles": {
+    "Default": {
+      "status_bar": {
+        "enable": true,
+        "left": [
+          {
+            "class": "iTermStatusBarHostComponent",
+            "uuid": "host"
+          },
+          {
+            "class": "iTermStatusBarCPUComponent",
+            "uuid": "cpu"
+          }
+        ],
+        "right": [
+          {
+            "class": "iTermStatusBarCustomComponent",
+            "uuid": "claude-status",
+            "knobs": {
+              "base64": false,
+              "command": "/Users/YOUR_USERNAME/iterm2-claude-status/scripts/claude_status.sh",
+              "refresh_interval": 2
+            }
+          }
+        ]
+      }
+    }
+  }
+}
